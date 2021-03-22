@@ -5,7 +5,7 @@ export class Fields {
     public name: string,
     public lastName: string,
     public email: string,
-    public place: string,
+    public flower: string,
     public birthdate: any,
   ) {  }
 

@@ -9,11 +9,15 @@ import { Fields } from '../fields';
 })
 export class FormComponent {
 
-  places = ['Amsterdam', 'Alkmaar',
-    'Den Helder', 'Rotterdam'];
+  flowers = [
+    'Red Roses',
+    'Orchids',
+    'Lilies',
+    'Tulips'
+  ];
 
   // @ts-ignore
-  model = new Fields(18, 'Deisi', 'Bonilla', 'deisi@google.com', this.places[2]);
+  model = new Fields(18, 'Deisi', 'Bonilla', 'deisi@google.com', this.flowers[1]);
 
   submitted = false;
 
@@ -27,7 +31,7 @@ export class FormComponent {
   // tslint:disable-next-line:typedef
   newField() {
     // @ts-ignore
-    this.model = new Fields(42, '', '', '', this.places[3]);
+    this.model = new Fields(42, '', '', '', this.flowers[3]);
   }
 
   // Reveal in html:
