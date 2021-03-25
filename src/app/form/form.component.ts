@@ -38,8 +38,7 @@ export class FormComponent {
   //   Name via form.controls = {{showFormControls(heroForm)}}
   // tslint:disable-next-line:typedef
   showFormControls(form: any) {
-    return form && form.controls.name &&
-      form.controls.name.value; // Dr. IQ
+    return form && form.controls.name && form.controls.name.value; // Dr. IQ
   }
 
 }
