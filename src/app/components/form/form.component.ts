@@ -1,6 +1,14 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { ErrorStateMatcher } from '@angular/material/core';
 
-import { Fields } from '../../fields';
+/** Error when invalid control is dirty, touched, or submitted. */
+export class MyErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted = form && form.submitted;
+    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+  }
+}
 
 @Component({
   selector: 'app-form',
@@ -9,38 +17,16 @@ import { Fields } from '../../fields';
 })
 export class FormComponent {
 
-  myDate = Date.now();
+  emailFormControl = new FormControl('', [
+    Validators.required,
+    Validators.email,
+  ]);
 
-  flowers = [
-    'Red Roses',
-    'Orchids',
-    'Lilies',
-    'Tulips'
-  ];
-
-  // @ts-ignore
-  model = new Fields(18, 'Deisi', 'Bonilla', 'deisi@google.com', this.flowers[1]);
+  matcher = new MyErrorStateMatcher();
 
   submitted = false;
 
   // tslint:disable-next-line:typedef
   onSubmit() { this.submitted = true; }
-
-  // TODO: Remove this when we're done
-  // tslint:disable-next-line:typedef
-  get diagnostic() { return JSON.stringify(this.model); }
-
-  // tslint:disable-next-line:typedef
-  newField() {
-    // @ts-ignore
-    this.model = new Fields(42, '', '', '', this.flowers[3]);
-  }
-
-  // Reveal in html:
-  //   Name via form.controls = {{showFormControls(heroForm)}}
-  // tslint:disable-next-line:typedef
-  showFormControls(form: any) {
-    return form && form.controls.name && form.controls.name.value; // Dr. IQ
-  }
 
 }

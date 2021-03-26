@@ -1,31 +1,42 @@
 <div id="formContainer" class="col-lg-6" [hidden]="submitted">
   <app-hero-box></app-hero-box>
   <form (ngSubmit)="onSubmit()" #Form="ngForm">
-    <hr>
-      <div>{{diagnostic}}</div>
-    <hr>
+
+<!--    <div class="form-group">-->
+<!--      <mat-form-field appearance="outline">-->
+<!--        <mat-label>Name</mat-label>-->
+<!--        <input type="text" matInput [formControl]="nameFormControl" [errorStateMatcher]="matcher" placeholder="Deisi">-->
+<!--        <mat-hint>Errors appear instantly!</mat-hint>-->
+<!--        <mat-error *ngIf="nameFormControl.hasError('name') && !nameFormControl.hasError('required')">Please enter a valid email address</mat-error>-->
+<!--        <mat-error *ngIf="nameFormControl.hasError('required')">Name is <strong>required</strong>-->
+<!--        </mat-error>-->
+<!--      </mat-form-field>-->
+<!--    </div>-->
+
+<!--    <div class="form-group">-->
+<!--      <mat-form-field appearance="outline">-->
+<!--        <mat-label>Last Name</mat-label>-->
+<!--        <input matInput placeholder="Last Name" required [(ngModel)]="model.lastName">-->
+<!--      </mat-form-field>-->
+<!--    </div>-->
 
     <div class="form-group">
-        <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name" #name="ngModel">
-        <label class="form-control-placeholder" for="name">Name *</label>
-      <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-        Name is required
-      </div>
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher" placeholder="Ex. pat@example.com">
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">Please enter a valid email address</mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">Email is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
     </div>
 
     <div class="form-group">
-      <input type="text" class="form-control" id="lastName" required [(ngModel)]="model.lastName" name="lastName">
-      <label class="form-control-placeholder" for="lastName">Last Name *</label>
-    </div>
-
-    <div class="form-group">
-      <input type="email" class="form-control" id="email" required [(ngModel)]="model.email" name="email">
-      <label class="form-control-placeholder" for="email">Email *</label>
-    </div>
-
-    <div class="form-group">
-      <input type="date" class="form-control" id="birthdate" [(ngModel)]="model.birthdate" name="birthdate">
-      <label class="form-control-placeholder" for="birthdate">Birthdate *</label>
+      <mat-form-field appearance="fill">
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
     </div>
 
     <button type="submit" class="btn btn-success" [disabled]="!Form.form.valid">Submit</button>
