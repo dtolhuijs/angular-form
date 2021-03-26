@@ -28,16 +28,6 @@
       <label class="form-control-placeholder" for="birthdate">Birthdate *</label>
     </div>
 
-<!--    <div class="form-group">-->
-<!--      <label for="flower">Favorite Flower</label>-->
-<!--      <select class="form-control" id="flower" required [(ngModel)]="model.flower" name="flower" #place="ngModel">-->
-<!--        <option *ngFor="let flower of flowers" [value]="flower">{{ flower }}</option>-->
-<!--      </select>-->
-<!--      <div [hidden]="place.valid || place.pristine" class="alert alert-danger">-->
-<!--        Flower is required-->
-<!--      </div>-->
-<!--    </div>-->
-
     <button type="submit" class="btn btn-success" [disabled]="!Form.form.valid">Submit</button>
 
   </form>

@@ -1,0 +1,45 @@
+/* Global Styles */
+
+:root {
+
+  //primary colors
+  --color-primary: #6eb0d9;
+  --color-secondary: #ea7300;
+  --color-tertiary: #ffffff;
+  --border-color: #333333;
+  --form-bg-color: #ececec;
+
+  // error
+  --warning-color: #ff0000;
+
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  body, input[text] {
+    color: #333;
+    font-family: Cambria, Georgia, serif;
+  }
+}
+
+/**************************
+MEDIA QUERIES
+ **************************/
+@media (min-width: 1200px) {
+  #formContainer {
+    float: right;
+  }
+  #pageContainer {
+    float: left;
+  }
+}
+@media (min-width: 1300px) {
+  #formContainer {
+    margin-top: -4rem;
+  }
+}
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 
-import { Fields } from '../fields';
+import { Fields } from '../../fields';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css']
+  styleUrls: ['./form.component.scss']
 })
 export class FormComponent {
+
+  myDate = Date.now();
 
   flowers = [
     'Red Roses',

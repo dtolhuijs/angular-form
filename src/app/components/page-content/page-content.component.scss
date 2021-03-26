@@ -1,0 +1,22 @@
+#pageContainer {
+  h1 {
+    font-weight: bold;
+  }
+
+  li {
+    list-style: none;
+
+    &:before {
+      content: "•";
+      color: var(--color-secondary);
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+      font-size: 24px;
+      vertical-align: middle;
+    }
+  }
+
+
+}
+
