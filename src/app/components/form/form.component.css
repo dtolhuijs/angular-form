@@ -1,0 +1,31 @@
+form {
+  background-color: var(--form-bg-color);
+  padding: 4rem; }
+  form .form-group {
+    position: relative;
+    margin-bottom: 1.5rem; }
+    form .form-group label {
+      font-weight: normal; }
+    form .form-group .form-control {
+      height: 5rem;
+      border: solid 1px var(--border-color);
+      border-radius: 0; }
+    form .form-group .ng-invalid:not(form) {
+      border: solid 1px var(--warning-color); }
+    form .form-group .form-control-placeholder {
+      position: absolute;
+      top: 8px;
+      padding: 7px 0 0 13px;
+      transition: all 200ms;
+      opacity: 0.5; }
+    form .form-group .form-control:focus + .form-control-placeholder,
+    form .form-group .form-control:valid + .form-control-placeholder {
+      font-size: 75%;
+      top: 15px;
+      transform: translate3d(0, -100%, 0);
+      opacity: 1;
+      background: #ffffff;
+      padding: 4px;
+      margin-left: 5px; }
+
+/*# sourceMappingURL=form.component.css.map */
