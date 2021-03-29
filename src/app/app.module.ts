@@ -9,6 +9,7 @@ import { PageContentComponent } from './components/page-content/page-content.com
 import { HeroBoxComponent } from './components/hero-box/hero-box.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './modules/material.module';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { MaterialModule } from './modules/material.module';
     FormComponent,
     HeroImageComponent,
     PageContentComponent,
-    HeroBoxComponent
+    HeroBoxComponent,
+    FooterComponent
   ],
   providers: [],
   bootstrap: [ AppComponent ]

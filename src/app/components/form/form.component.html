@@ -2,23 +2,25 @@
   <app-hero-box></app-hero-box>
   <form (ngSubmit)="onSubmit()" #Form="ngForm">
 
-<!--    <div class="form-group">-->
-<!--      <mat-form-field appearance="outline">-->
-<!--        <mat-label>Name</mat-label>-->
-<!--        <input type="text" matInput [formControl]="nameFormControl" [errorStateMatcher]="matcher" placeholder="Deisi">-->
-<!--        <mat-hint>Errors appear instantly!</mat-hint>-->
-<!--        <mat-error *ngIf="nameFormControl.hasError('name') && !nameFormControl.hasError('required')">Please enter a valid email address</mat-error>-->
-<!--        <mat-error *ngIf="nameFormControl.hasError('required')">Name is <strong>required</strong>-->
-<!--        </mat-error>-->
-<!--      </mat-form-field>-->
-<!--    </div>-->
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input type="text" matInput [formControl]="inputFormControl" [errorStateMatcher]="matcher" placeholder="Deisi">
+        <mat-error *ngIf="inputFormControl.hasError('minLength') && !inputFormControl.hasError('minLength')">Please enter a valid email address</mat-error>
+        <mat-error *ngIf="inputFormControl.hasError('required')">First name is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
 
-<!--    <div class="form-group">-->
-<!--      <mat-form-field appearance="outline">-->
-<!--        <mat-label>Last Name</mat-label>-->
-<!--        <input matInput placeholder="Last Name" required [(ngModel)]="model.lastName">-->
-<!--      </mat-form-field>-->
-<!--    </div>-->
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input type="text" matInput [formControl]="inputFormControl" [errorStateMatcher]="matcher" placeholder="Bonilla">
+        <mat-error *ngIf="inputFormControl.hasError('minLength') && !inputFormControl.hasError('minLength')">Please enter a valid email address</mat-error>
+        <mat-error *ngIf="inputFormControl.hasError('required')">Last name is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
 
     <div class="form-group">
       <mat-form-field appearance="outline">

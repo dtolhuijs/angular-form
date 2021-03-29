@@ -21,6 +21,11 @@ export class FormComponent {
     Validators.required,
     Validators.email,
   ]);
+  inputFormControl = new FormControl('', [
+    Validators.required,
+    Validators.requiredTrue,
+  ]);
+
 
   matcher = new MyErrorStateMatcher();
 
