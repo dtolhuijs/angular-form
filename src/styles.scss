@@ -38,6 +38,16 @@ MEDIA QUERIES
     margin-top: -4rem;
   }
 }
+@media (max-width: 450px) {
+  .footer-content-centralizer {
+    .footer-content-wrapper {
+      justify-content: inherit;
+      .footer-links {
+        white-space: initial !important;
+      }
+    }
+  }
+}
 
 
 
