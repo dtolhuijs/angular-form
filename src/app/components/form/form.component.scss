@@ -3,9 +3,7 @@ form {
   padding: 4rem;
 
   .form-group {
-    mat-form-field {
-      width: 100%
-    }
+    margin-bottom: 12px;
     .mat-radio-button ~ .mat-radio-button {
       margin-left: 16px;
     }
