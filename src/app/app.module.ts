@@ -9,7 +9,7 @@ import { PageContentComponent } from './components/page-content/page-content.com
 import { HeroBoxComponent } from './components/hero-box/hero-box.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './modules/material.module';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   imports: [

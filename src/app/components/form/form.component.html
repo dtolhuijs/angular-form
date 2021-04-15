@@ -1,10 +1,21 @@
 <div id="formContainer" class="col-lg-6" [hidden]="submitted">
   <app-hero-box></app-hero-box>
   <form (ngSubmit)="onSubmit()" #Form="ngForm">
+    <div class="form-group">
+      <h3>Personal information</h3>
+    </div>
+
+    <div class="form-group">
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1">Man</mat-radio-button>
+        <mat-radio-button value="2">Woman</mat-radio-button>
+        <mat-radio-button value="2">Other</mat-radio-button>
+      </mat-radio-group>
+    </div>
 
     <div class="form-group">
       <mat-form-field appearance="outline">
-        <mat-label>First Name</mat-label>
+        <mat-label>First Name *</mat-label>
         <input type="text" matInput [formControl]="inputFormControl" [errorStateMatcher]="matcher" placeholder="Deisi">
         <mat-error *ngIf="inputFormControl.hasError('minLength') && !inputFormControl.hasError('minLength')">Please enter a valid email address</mat-error>
         <mat-error *ngIf="inputFormControl.hasError('required')">First name is <strong>required</strong>
@@ -14,7 +25,7 @@
 
     <div class="form-group">
       <mat-form-field appearance="outline">
-        <mat-label>Last Name</mat-label>
+        <mat-label>Last Name *</mat-label>
         <input type="text" matInput [formControl]="inputFormControl" [errorStateMatcher]="matcher" placeholder="Bonilla">
         <mat-error *ngIf="inputFormControl.hasError('minLength') && !inputFormControl.hasError('minLength')">Please enter a valid email address</mat-error>
         <mat-error *ngIf="inputFormControl.hasError('required')">Last name is <strong>required</strong>
@@ -24,7 +35,7 @@
 
     <div class="form-group">
       <mat-form-field appearance="outline">
-        <mat-label>Email</mat-label>
+        <mat-label>Email *</mat-label>
         <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher" placeholder="Ex. pat@example.com">
         <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">Please enter a valid email address</mat-error>
         <mat-error *ngIf="emailFormControl.hasError('required')">Email is <strong>required</strong>
@@ -33,7 +44,7 @@
     </div>
 
     <div class="form-group">
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="outline">
         <mat-label>Choose a date</mat-label>
         <input matInput [matDatepicker]="picker">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
