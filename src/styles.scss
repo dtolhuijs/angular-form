@@ -1,6 +1,7 @@
 /* Global Styles */
 @import "app/components/scss/components/am-input-fields";
 @import "app/components/scss/components/am-radio-btns";
+@import "app/components/scss/components/font-styles";
 
 :root {
 
@@ -10,6 +11,7 @@
   --color-tertiary: #ffffff;
   --border-color: #333333;
   --form-bg-color: #ececec;
+  --font-color: #333333;
 
   // error
   --warning-color: #ff0000;

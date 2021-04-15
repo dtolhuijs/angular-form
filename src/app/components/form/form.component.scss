@@ -3,10 +3,14 @@ form {
   padding: 4rem;
 
   .form-group {
-    margin-bottom: 12px;
+    margin-bottom: 0;
     .mat-radio-button ~ .mat-radio-button {
       margin-left: 16px;
     }
+  }
+  .gender,
+  .privacy-checkbox {
+    padding-bottom: 12px;
   }
 
   button {

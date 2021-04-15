@@ -1,0 +1,31 @@
+.mat-h1, .mat-headline, .mat-typography h1,
+.mat-h2, .mat-title, .mat-typography h2,
+.mat-h3, .mat-subheading-2, .mat-typography h3,
+.mat-h4, .mat-subheading-1, .mat-typography h4,
+.mat-h5, .mat-typography h5,
+.mat-h6, .mat-typography h6 {
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: var(--font-color);
+}
+.mat-h1, .mat-headline, .mat-typography h1, {
+  font-size: 32px;
+}
+.mat-h2, .mat-title, .mat-typography h2 {
+  font-size: 24px;
+}
+.mat-h3, .mat-subheading-2, .mat-typography h3 {
+  font-size: 20px;
+}
+.mat-h4, .mat-subheading-1, .mat-typography h4 {
+  font-size: 16px;
+}
+.mat-h5, .mat-typography h5 {
+  font-size: 13px;
+}
+.mat-h6, .mat-typography h6 {
+  font-size: 10px;
+}

@@ -1,11 +1,12 @@
 <div id="formContainer" class="col-lg-6" [hidden]="submitted">
   <app-hero-box></app-hero-box>
   <form (ngSubmit)="onSubmit()" #Form="ngForm">
+
     <div class="form-group">
       <h3>Personal information</h3>
     </div>
 
-    <div class="form-group">
+    <div class="form-group gender">
       <mat-radio-group aria-label="Select an option">
         <mat-radio-button value="1">Man</mat-radio-button>
         <mat-radio-button value="2">Woman</mat-radio-button>
@@ -50,6 +51,13 @@
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
+    </div>
+
+    <div class="form-group privacy-checkbox">
+      <mat-checkbox
+        class="example-margin">
+        I have read and agree to the <a href="https://help.four-paws.org/nl-NL/data-privacy-statement" target="_blank">privacy policy</a>
+      </mat-checkbox>
     </div>
 
     <button type="submit" class="btn button" [disabled]="!Form.form.valid">Submit</button>
