@@ -1,0 +1,22 @@
+.mat-form-field-wrapper {
+  padding-bottom: 0;
+}
+.mat-form-field-appearance-outline .mat-form-field-outline-start,
+.mat-form-field-appearance-outline .mat-form-field-outline-end {
+  border-radius: 0 !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: #333333;
+  background-color: #ffffff;
+}
+
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  color: var(--color-primary)
+}
+
+.mat-form-field.mat-focused .mat-form-field-label {
+  color: var(--color-primary)
+}
+
+

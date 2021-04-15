@@ -1,15 +1,3 @@
-// input fields
-.mat-form-field-appearance-outline .mat-form-field-outline-start,
-.mat-form-field-appearance-outline .mat-form-field-outline-end {
-  border-radius: 0 !important;
-}
-
-.mat-form-field-appearance-outline .mat-form-field-outline {
-  color: #333333;
-  background-color: #ffffff;
-}
-
-// radio buttons
 mat-radio-group {
   mat-radio-button {
     label {
@@ -33,5 +21,3 @@ mat-radio-group {
     background-color: var(--color-secondary);
   }
 }
-
-
